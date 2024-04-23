@@ -218,7 +218,7 @@ export default function UserRoutes(app) {
 
             res.json(userCourses);
         } catch (e) {
-            console.error('Error finding user courses:', error);
+            console.error('Error finding user courses:', e);
             res.status(500).json({ error: 'Internal server error' });
         }
     };

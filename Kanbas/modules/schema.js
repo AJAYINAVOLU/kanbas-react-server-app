@@ -8,7 +8,7 @@ const lessonSchema = new mongoose.Schema({
 });
 
 const moduleSchema = new mongoose.Schema({
-    id: String,
+    _id: String,
     name: String,
     description: String,
     course: String,

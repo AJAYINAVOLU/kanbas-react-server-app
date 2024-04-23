@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const gradeSchema = new mongoose.Schema({
-    id: String,
+    _id: String,
     student: String,
     assignment: String,
     grade: String
