@@ -1,6 +1,8 @@
 import * as dao from "./dao.js";
 import * as enrollmentsDao from "../enrollments/dao.js";
 import * as coursesDao from "../courses/dao.js";
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default function UserRoutes(app) {
     // Fetch users for grades based on enrollments.
@@ -152,8 +154,8 @@ export default function UserRoutes(app) {
         }
         
         try {
-            const newUser = await dao.createUser({ username, password });
-            console.log("[4] newUser", newUser);
+            const _id = uuidv4();
+            const newUser = await dao.createUser({ _id, username, password });            console.log("[4] newUser", newUser);
             req.session["currentUser"] = newUser;
             console.log("[5] req.session", req.session);
             res.send(newUser);
