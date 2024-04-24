@@ -26,7 +26,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: 'a6--zingy-starship-af0caa.netlify.app',    // Restrict cross origin resource sharing to the react application.
+        origin: 'https://a6--zingy-starship-af0caa.netlify.app',    // Restrict cross origin resource sharing to the react application.
         credentials: true,                   // Support cookies.
     })
 );
