@@ -22,14 +22,14 @@ const app = express();
 
 // const cors = require('cors');
 
-app.use(cors());
+// app.use(cors());
 
-// app.use(
-//     cors({
-//         origin: process.env.FRONTEND_URL,    // Restrict cross origin resource sharing to the react application.
-//         credentials: true,                   // Support cookies.
-//     })
-// );
+app.use(
+    cors({
+        origin: 'a6--zingy-starship-af0caa.netlify.app',    // Restrict cross origin resource sharing to the react application.
+        credentials: true,                   // Support cookies.
+    })
+);
  
 app.use(express.json());
  
