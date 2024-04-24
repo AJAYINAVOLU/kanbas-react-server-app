@@ -20,12 +20,16 @@ mongoose.connect(CONNECTION_STRING);
  
 const app = express();
 
-app.use(
-    cors({
-        origin: process.env.FRONTEND_URL,    // Restrict cross origin resource sharing to the react application.
-        credentials: true,                   // Support cookies.
-    })
-);
+// const cors = require('cors');
+
+app.use(cors());
+
+// app.use(
+//     cors({
+//         origin: process.env.FRONTEND_URL,    // Restrict cross origin resource sharing to the react application.
+//         credentials: true,                   // Support cookies.
+//     })
+// );
  
 app.use(express.json());
  
